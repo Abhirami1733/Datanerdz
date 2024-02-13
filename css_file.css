@@ -1,0 +1,77 @@
+
+body
+{
+    background-image:url(https://i.pinimg.com/originals/d4/0f/cf/d40fcff026d79ea550b8e67e29b6d78c.gif);
+    background-repeat:no-repeat;
+    background-size:cover;
+    
+}
+.carousel-container {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      overflow: hidden;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .carousel-slide {
+      display: flex;
+      transition: transform 0.1s ease-in-out;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      display: block;
+      height:400px;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    .prev-slide,
+    .next-slide {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      padding: 14px;
+    
+
+    }
+    .prev-slide:hover, .next-slide:hover {
+  background-color: rgba(0,0,0,0.1);
+
+}
+
+    .prev-slide {
+      left: 0;
+
+    }
+
+    .next-slide {
+      right: 0;
+    }
+
+    .pagination {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .dot {
+      height: 10px;
+      width: 10px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      margin: 0 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .dot.active {
+      background-color: #717171;
+    }
+
+    @keyframes fade {
+      from {opacity: .2} 
+      to {opacity: 1}
+    }
